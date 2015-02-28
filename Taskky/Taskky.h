@@ -8,6 +8,8 @@
 #include "boost/algorithm/string/split.hpp"
 #include "boost/algorithm/string/classification.hpp"
 
+#include "Task.h"
+
 #include <string>
 #include <vector>
 
@@ -17,58 +19,6 @@ using namespace boost::posix_time;
 using namespace boost::gregorian;
 
 
-//This is the class used to store each Task object
-class Task {
-public:
-	enum class TaskRecurrence {NONE, DAY, WEEK, MONTH, YEAR};
-	enum class TaskPriority {LOW,NORMAL,HIGH};
-
-	Task();
-
-	~Task(void);
-
-	//attribute getters
-	static int getNumber();
-	static string getDescription();
-	static string getDetails();
-	static ptime getStartTime();
-	static ptime getEndTime();
-	static ptime getReminder();
-	static Task::TaskRecurrence getRecurrence();
-	static Task::TaskPriority getPriority();
-	
-	//attribute setters
-	static void setNumber(int taskNumber);
-	static void setDescription(string taskDescription);
-	static void setDetails(string taskDetails);
-	static void setStartTime(ptime taskStartTime);
-	static void setEndTime(ptime taskEndTime);
-	static void setReminder(ptime taskReminder);
-	static void setRecurrence(TaskRecurrence taskRecurrence);
-	static void setPriority(TaskPriority taskPriority);
-
-private:
-	static int _Number;
-	static string _Description;
-	static string _Details;
-	static ptime _startTime;
-	static ptime _endTime;
-	static ptime _Reminder;
-	static Task::TaskRecurrence _Recurrence;
-	static Task::TaskPriority _Priority;
-};
-
-	int Task::_Number = 0;
-	string Task::_Description = "";
-	string Task::_Details = "";
-	ptime Task::_startTime = posix_time::second_clock::local_time();
-	ptime Task::_endTime = posix_time::second_clock::local_time();
-	ptime Task::_Reminder = posix_time::second_clock::local_time();
-	Task::TaskRecurrence Task::_Recurrence = TaskRecurrence::NONE;
-	Task::TaskPriority Task::_Priority = TaskPriority::LOW;
-
-
-//This is the class used to run the Taskky program
 class Taskky {
 public:
 	// These are the possible command types

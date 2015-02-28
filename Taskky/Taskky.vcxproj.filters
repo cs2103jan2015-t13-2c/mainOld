@@ -15,12 +15,36 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Taskky.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
     <ClInclude Include="Task.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainLogic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Command.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="CommandAdd.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Taskky.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="Task.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainLogic.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Command.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="CommandAdd.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

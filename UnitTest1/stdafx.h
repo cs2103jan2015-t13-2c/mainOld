@@ -10,6 +10,6 @@
 // Headers for CppUnitTest
 #include "CppUnitTest.h"
 
-#include "../Taskky/Task.h"
+#include "../Taskky/Taskky.h"
 
 // TODO: reference additional headers your program requires here
